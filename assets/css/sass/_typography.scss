@@ -1,0 +1,20 @@
+@use "colors";
+@use "fonts" as *;
+
+@each $key, $size in $sizes {
+  .#{$key} {
+    font-size: $size;
+  }
+}
+
+.fade {
+  color: colors.$text;
+}
+
+.barlow {
+  font-family: $barlow;
+}
+
+.bellefair {
+  font-family: $bellefair;
+}

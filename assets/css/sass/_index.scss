@@ -1,1 +1,8 @@
-@use "resets";
+@forward "resets";
+@forward "breakpoints";
+@forward "colors";
+@forward "fonts";
+@forward "typography";
+@forward "utilities";
+@forward "base";
+@forward "components";

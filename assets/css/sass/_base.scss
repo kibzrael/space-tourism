@@ -1,0 +1,18 @@
+@use "fonts";
+@use "colors";
+
+:root {
+  font-size: fonts.$base_size;
+  font-family: fonts.$barlow_condensed;
+}
+
+body {
+  background-color: colors.$background;
+  background-image: url("~/assets/images/background-home-desktop.jpg");
+  background-size: cover;
+  color: colors.$foreground;
+}
+
+.page {
+  padding: 5rem 10rem;
+}

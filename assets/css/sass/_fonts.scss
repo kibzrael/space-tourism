@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
 
 $barlow: "Barlow", sans-serif;
-$barlow_condesed: "Barlow Condensed", sans-serif;
+$barlow_condensed: "Barlow Condensed", sans-serif;
 $bellefair: "Bellefair", serif;
 
 $base_size: 16px;
@@ -12,4 +12,7 @@ $sizes: (
   lg: 1.125rem,
   xl: 1.75rem,
   xxl: 2rem,
+  title: 3.5rem,
+  title-lg: 6.25rem,
+  title-xl: 9.375rem,
 );

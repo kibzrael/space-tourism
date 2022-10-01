@@ -1,0 +1,41 @@
+@use "../colors";
+
+.home {
+  padding-top: 10rem;
+
+  .intro {
+    max-width: 63ch;
+    gap: 1.5rem;
+
+    .xl {
+      letter-spacing: 0.3125rem;
+    }
+
+    .lg {
+      line-height: 2rem;
+    }
+  }
+
+  .explore {
+    position: relative;
+    background-color: white;
+    color: colors.$background;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 100vmax;
+    text-align: center;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+      outline: solid 5.5rem rgba(255, 255, 255, 0.1);
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
