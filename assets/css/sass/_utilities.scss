@@ -23,3 +23,9 @@
 .flex-end {
   align-items: flex-end;
 }
+
+.divider {
+  align-self: stretch;
+  height: 1px;
+  background-color: #383b4b;
+}
