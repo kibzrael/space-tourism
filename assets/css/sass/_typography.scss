@@ -22,3 +22,12 @@
 .upper {
   text-transform: uppercase;
 }
+
+.page-title {
+  letter-spacing: 4.72px;
+
+  span {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+  }
+}

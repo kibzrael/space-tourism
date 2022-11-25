@@ -1,20 +1,61 @@
 <template>
-  <div>
-    <p><span>04</span> SPACE LAUNCH 101</p>
-    <div>
-      <div class="tab">1</div>
-      <div class="tab">2</div>
-      <div class="tab">3</div>
-      <div>
-        <p>THE TERMINOLOGY…</p>
-        <h1>Title</h1>
-        <p>Description</p>
+  <div class="technology | column">
+    <p class="page-title xl"><span>04</span> SPACE LAUNCH 101</p>
+    <div class="row btwn">
+      <div class="tabs | column">
+        <div
+          v-for="tabIndex in technologies.length"
+          :key="tabIndex"
+          :class="'tab xxl' + (index == tabIndex - 1 ? ' active' : '')"
+          @click="index = tabIndex - 1">
+          {{ tabIndex }}
+        </div>
+      </div>
+
+      <div class="details | column">
+        <p class="fade">THE TERMINOLOGY…</p>
+        <h1 class="title bellefair upper">{{ technologies[index].name }}</h1>
+        <p class="description | lg barlow fade">
+          {{ technologies[index].description }}
+        </p>
       </div>
       <img
-        src="~/assets/images/image-launch-vehicle-portrait.jpg"
-        alt="Technology Image"
-      />
+        class="image"
+        :src="technologies[index].images.portrait"
+        alt="Technology Image" />
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+let index = ref(0);
+
+let technologies = [
+  {
+    name: "Launch vehicle",
+    images: {
+      portrait: "/assets/technology/image-launch-vehicle-portrait.jpg",
+      landscape: "/assets/technology/image-launch-vehicle-landscape.jpg",
+    },
+    description:
+      "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+  },
+  {
+    name: "Spaceport",
+    images: {
+      portrait: "/assets/technology/image-spaceport-portrait.jpg",
+      landscape: "/assets/technology/image-spaceport-landscape.jpg",
+    },
+    description:
+      "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
+  },
+  {
+    name: "Space capsule",
+    images: {
+      portrait: "/assets/technology/image-space-capsule-portrait.jpg",
+      landscape: "/assets/technology/image-space-capsule-landscape.jpg",
+    },
+    description:
+      "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+  },
+];
+</script>

@@ -2,7 +2,11 @@
   <div class="destination | column">
     <p class="page-title | xl"><span>01</span> PICK YOUR DESTINATION</p>
     <div class="row around">
-      <img :src="destinations[index].images.png" alt="Destination Image" />
+      <img
+        :src="destinations[index].images.png"
+        :key="'img' + index"
+        alt="Destination Image"
+      />
       <div class="details | column">
         <div class="tabs | row fade">
           <p

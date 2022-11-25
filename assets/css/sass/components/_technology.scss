@@ -1,0 +1,42 @@
+.technology {
+  margin-left: 5vh;
+  padding-right: 0;
+  gap: 2rem;
+
+  .tabs {
+    gap: 2rem;
+
+    .tab {
+      width: 5rem;
+      height: 5rem;
+      border: rgba($color: #ffffff, $alpha: 0.25) solid 1px;
+      border-radius: 100vmax;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.active {
+        border: none;
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  .details {
+    gap: 1rem;
+
+    .title {
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      max-width: 43ch;
+    }
+  }
+
+  .image {
+    max-height: 65vh;
+  }
+}

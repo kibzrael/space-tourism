@@ -13,5 +13,5 @@ body {
 }
 
 .page {
-  padding: 2rem 10rem;
+  padding: 2rem min(10rem, 8vw);
 }

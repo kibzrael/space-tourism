@@ -41,7 +41,7 @@ let props = defineProps(["modelValue"]);
 let emits = defineEmits(["update:modelValue"]);
 
 let url = props.modelValue;
-let pages = { home: 0, destination: 1, crew: 3, technology: 4 };
+let pages = { home: 0, destination: 1, crew: 2, technology: 3 };
 let pageIndex = ref(pages[url]);
 
 function selectTab(index) {
