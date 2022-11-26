@@ -1,27 +1,32 @@
 <template>
   <div class="destination | column">
-    <p class="page-title | xl"><span>01</span> PICK YOUR DESTINATION</p>
-    <div class="row around">
+    <p class="page-title | xl t-lg m-sm">
+      <span>01</span> PICK YOUR DESTINATION
+    </p>
+    <div class="row flex-end collapse sm-center sm-gap around">
       <img
         :src="destinations[index].images.png"
         :key="'img' + index"
-        alt="Destination Image"
-      />
-      <div class="details | column">
+        class="image"
+        alt="Destination Image" />
+      <div class="details | column sm-center">
         <div class="tabs | row fade">
           <p
             v-for="(item, dIndex) in destinations"
             :key="dIndex"
             :class="'tab | upper' + (index == dIndex ? ' active' : '')"
-            @click="index = dIndex"
-          >
+            @click="index = dIndex">
             {{ item.name }}
           </p>
         </div>
-        <h1 class="title-lg bellefair upper">{{ destinations[index].name }}</h1>
-        <p class="lg barlow fade">{{ destinations[index].description }}</p>
+        <h1 class="title-lg t-title-md m-title bellefair upper">
+          {{ destinations[index].name }}
+        </h1>
+        <p class="description | lg m-md barlow fade">
+          {{ destinations[index].description }}
+        </p>
         <div class="divider"></div>
-        <div class="metrics | row">
+        <div class="metrics | row m-collapse s-center">
           <div class="column">
             <p class="sm fade">AVG. DISTANCE</p>
             <p class="xl upper bellefair">{{ destinations[index].distance }}</p>

@@ -1,21 +1,25 @@
 <template>
   <div class="technology | column">
-    <p class="page-title xl"><span>04</span> SPACE LAUNCH 101</p>
-    <div class="row btwn">
-      <div class="tabs | column">
+    <p class="page-title xl t-lg m-sm"><span>04</span> SPACE LAUNCH 101</p>
+    <div class="row collapse sm-center sm-gap btwn">
+      <div class="column tabs">
         <div
           v-for="tabIndex in technologies.length"
           :key="tabIndex"
-          :class="'tab xxl' + (index == tabIndex - 1 ? ' active' : '')"
+          :class="
+            'tab xxl t-label m-md ' + (index == tabIndex - 1 ? ' active' : '')
+          "
           @click="index = tabIndex - 1">
           {{ tabIndex }}
         </div>
       </div>
 
       <div class="details | column">
-        <p class="fade">THE TERMINOLOGY…</p>
-        <h1 class="title bellefair upper">{{ technologies[index].name }}</h1>
-        <p class="description | lg barlow fade">
+        <p class="fade m-sm">THE TERMINOLOGY…</p>
+        <h1 class="title t-title-sm m-label bellefair upper">
+          {{ technologies[index].name }}
+        </h1>
+        <p class="description | lg t-md m-sm barlow fade">
           {{ technologies[index].description }}
         </p>
       </div>

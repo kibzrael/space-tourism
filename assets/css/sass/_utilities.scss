@@ -1,3 +1,5 @@
+@use "breakpoints";
+
 .row {
   display: flex;
   align-items: center;
@@ -28,4 +30,21 @@
   align-self: stretch;
   height: 1px;
   background-color: #383b4b;
+}
+
+@media (max-width: breakpoints.$tablet) {
+  .collapse {
+    flex-direction: column;
+  }
+
+  .sm-center {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: breakpoints.$mobile) {
+  .m-collapse {
+    flex-direction: column;
+  }
 }

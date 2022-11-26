@@ -1,7 +1,17 @@
 <template>
   <div id="navbar">
     <img src="~/assets/icons/logo.svg" alt="Logo" />
-    <nav>
+    <img
+      @click="toggleNav(true)"
+      class="menu-icon"
+      src="~/assets/icons/icon-hamburger.svg"
+      alt="Menu Icon" />
+    <nav :class="showNav ? '' : 'hideNav'">
+      <img
+        @click="toggleNav(false)"
+        class="close-icon"
+        src="~/assets/icons/icon-close.svg"
+        alt="Close Icon" />
       <ol>
         <li>
           <NuxtLink @click="selectTab(0)" :class="'link' + getActive(0)" to="/"
@@ -44,10 +54,17 @@ let url = props.modelValue;
 let pages = { home: 0, destination: 1, crew: 2, technology: 3 };
 let pageIndex = ref(pages[url]);
 
+let showNav = ref(false);
+
+function toggleNav(opened: boolean) {
+  showNav.value = opened;
+}
+
 function selectTab(index) {
   pageIndex.value = index;
   let pageName = Object.keys(pages)[index];
   emits("update:modelValue", pageName);
+  showNav.value = false;
 }
 
 function getActive(index): string {

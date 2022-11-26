@@ -1,19 +1,45 @@
 @use "../colors";
+@use "../breakpoints";
 
 .destination {
   gap: 3rem;
 
-  > .row {
-    align-items: flex-end;
+  @media (max-width: breakpoints.$tablet) {
+    .sm-gap {
+      gap: 3rem;
+    }
+
+    .image {
+      max-width: 20rem;
+    }
+  }
+  @media (max-width: breakpoints.$mobile) {
+    .sm-gap {
+      gap: 2rem;
+    }
+
+    .image {
+      max-width: 10.75rem;
+    }
   }
 
   .details {
     gap: 1.5rem;
     max-width: 62ch;
 
+    @media (max-width: breakpoints.$tablet) {
+      max-width: 88ch;
+    }
+
     .tabs {
       gap: 1.5rem;
       margin-bottom: 0.5rem;
+      @media (max-width: breakpoints.$tablet) {
+        gap: 2rem;
+      }
+      @media (max-width: breakpoints.$mobile) {
+        gap: 1.5rem;
+      }
 
       .tab {
         padding-block: 1rem;
@@ -45,7 +71,9 @@
     .metrics {
       gap: 5rem;
       margin-top: 0.25rem;
-
+      @media (max-width: breakpoints.$mobile) {
+        gap: 3rem;
+      }
       .column {
         gap: 1rem;
 

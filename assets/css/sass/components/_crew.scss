@@ -1,8 +1,33 @@
+@use "../breakpoints";
+
 .crew {
   padding-bottom: 0;
 
   @media (min-width: 70rem) {
     margin-inline: 5vw;
+  }
+
+  .page-title {
+    align-self: flex-start;
+  }
+
+  @media (max-width: breakpoints.$tablet) {
+    .page-title {
+      margin-bottom: 2rem;
+    }
+
+    .sm-gap {
+      gap: 3rem;
+      @media (max-width: breakpoints.$mobile) {
+        gap: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    .page-title {
+      align-self: center;
+    }
   }
 
   & > .column {
@@ -12,6 +37,9 @@
 
   .details {
     gap: 1rem;
+    @media (max-width: breakpoints.$mobile) {
+      order: 3;
+    }
 
     .title {
       margin-bottom: 1rem;
@@ -19,14 +47,36 @@
 
     .bio {
       max-width: 43ch;
+      @media (max-width: breakpoints.$tablet) {
+        max-width: 51ch;
+      }
     }
   }
 
-  .image {
+  .image,
+  .m-image {
     max-height: 75vh;
     align-self: flex-end;
+
+    @media (max-width: breakpoints.$tablet) {
+      align-self: center;
+    }
+    @media (max-width: breakpoints.$mobile) {
+      max-height: 40vh;
+    }
+  }
+  .m-image {
+    display: none;
   }
 
+  @media (max-width: breakpoints.$mobile) {
+    .image {
+      display: none;
+    }
+    .m-image {
+      display: inline-flex;
+    }
+  }
   .indicators {
     display: flex;
     gap: 2rem;
@@ -40,6 +90,15 @@
 
       &.active {
         opacity: 1;
+      }
+    }
+    @media (max-width: breakpoints.$mobile) {
+      order: 2;
+      gap: 1.5rem;
+
+      .indicator {
+        width: 0.75rem;
+        height: 0.75rem;
       }
     }
   }

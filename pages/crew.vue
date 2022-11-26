@@ -1,11 +1,16 @@
 <template>
-  <div class="crew | row btwn">
-    <div class="column btwn">
-      <p class="page-title | xl"><span>02</span> MEET YOUR CREW</p>
-      <div class="details | column">
-        <p class="xxl bellefair upper fade">{{ crew[index].role }}</p>
-        <h1 class="title bellefair upper">{{ crew[index].name }}</h1>
-        <p class="bio | lg barlow fade">{{ crew[index].bio }}</p>
+  <div class="crew | row collapse sm-center btwn">
+    <div class="column sm-center sm-gap btwn">
+      <p class="page-title | xl t-lg m-sm"><span>02</span> MEET YOUR CREW</p>
+      <img class="m-image" :src="crew[index].images.png" alt="Crew Member" />
+      <div class="details | column sm-center">
+        <p class="xxl t-label m-md bellefair upper fade">
+          {{ crew[index].role }}
+        </p>
+        <h1 class="title t-title-sm m-xl bellefair upper">
+          {{ crew[index].name }}
+        </h1>
+        <p class="bio | lg t-md m-sm barlow fade">{{ crew[index].bio }}</p>
       </div>
 
       <div class="indicators">

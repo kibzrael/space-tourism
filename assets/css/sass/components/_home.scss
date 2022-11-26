@@ -1,7 +1,18 @@
 @use "../colors";
+@use "../breakpoints";
 
 .home {
   padding-top: 10rem;
+
+  @media (max-width: breakpoints.$tablet) {
+    padding-top: 5rem;
+    gap: 5rem;
+  }
+
+  @media (max-width: breakpoints.$mobile) {
+    padding-top: 1.5rem;
+    gap: 3rem;
+  }
 
   .intro {
     max-width: 63ch;
@@ -26,6 +37,11 @@
     text-align: center;
     transition: 300ms;
     cursor: pointer;
+
+    @media (max-width: breakpoints.$mobile) {
+      width: 10rem;
+      height: 10rem;
+    }
 
     &:hover {
       outline: solid 5.5rem rgba(255, 255, 255, 0.1);

@@ -1,9 +1,26 @@
 @use "colors";
 @use "fonts" as *;
+@use "breakpoints";
 
 @each $key, $size in $sizes {
   .#{$key} {
     font-size: $size;
+  }
+}
+
+@each $key, $size in $sizes {
+  @media (max-width: breakpoints.$tablet) {
+    .t-#{$key} {
+      font-size: $size;
+    }
+  }
+}
+
+@each $key, $size in $sizes {
+  @media (max-width: breakpoints.$mobile) {
+    .m-#{$key} {
+      font-size: $size;
+    }
   }
 }
 
@@ -26,8 +43,20 @@
 .page-title {
   letter-spacing: 4.72px;
 
+  @media (max-width: breakpoints.$mobile) {
+    align-self: center;
+  }
+
   span {
     color: rgba(255, 255, 255, 0.25);
     font-weight: 700;
+  }
+}
+
+.bio,
+.description {
+  line-height: 2rem;
+  @media (max-width: breakpoints.$tablet) {
+    line-height: 1.75rem;
   }
 }
