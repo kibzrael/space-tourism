@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://space.raelcode.tech)
+- Solution URL: [HERE](https://www.frontendmentor.io/solutions/nuxt-js-responsive-space-tourism-website-KziWoF5Mqa)
+- Live Site URL: [HERE](https://space.raelcode.tech)
 
 ## My process
 
