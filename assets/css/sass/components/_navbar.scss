@@ -54,6 +54,7 @@
 
     .menu-icon {
       display: inline-flex;
+      cursor: pointer;
     }
 
     nav {
@@ -74,6 +75,7 @@
         z-index: 3;
         right: 1.5rem;
         top: 2.25rem;
+        cursor: pointer;
       }
 
       ol {

@@ -1,6 +1,8 @@
 <template>
   <div id="navbar">
-    <img src="~/assets/icons/logo.svg" alt="Logo" />
+    <NuxtLink @click="selectTab(0)" to="/">
+      <img src="~/assets/icons/logo.svg" alt="Logo" />
+    </NuxtLink>
     <img
       @click="toggleNav(true)"
       class="menu-icon"
