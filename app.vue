@@ -3,7 +3,7 @@
     class="app"
     :style="{
       'background-image':
-        'url(/assets/images/background-' + page + '-' + screen + '.jpg)',
+        'url(/images/background-' + page + '-' + screen + '.jpg)',
     }">
     <NuxtLayout>
       <Navbar v-model="page" />

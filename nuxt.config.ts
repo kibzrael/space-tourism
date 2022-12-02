@@ -9,9 +9,16 @@ export default {
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "/assets/favicon-32x32.png",
+          href: "/favicon-32x32.png",
         },
       ],
     },
+  },
+  nitro: {
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+    },
+    minify: true,
   },
 };
