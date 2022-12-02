@@ -79,6 +79,7 @@
       max-width: 43ch;
       @media (max-width: breakpoints.$tablet) {
         max-width: 48ch;
+        padding-inline: 2rem;
       }
     }
   }
