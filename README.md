@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [HERE](https://www.frontendmentor.io/solutions/nuxt-js-responsive-space-tourism-website-KziWoF5Mqa)
-- Live Site URL: [HERE](https://space.raelcode.tech)
+- Live Site URL: [HERE](https://space.raelcode.com)
 
 ## My process
 
